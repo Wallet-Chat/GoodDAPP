@@ -2,7 +2,7 @@
 import React, { Fragment } from 'react'
 import { SafeAreaView, StyleSheet } from 'react-native'
 import { Provider as PaperProvider } from 'react-native-paper'
-import { WalletChatProvider } from 'react-native-wallet-chat'
+import { WalletChatProvider } from 'react-native-wallet-chat-test'
 
 import { SimpleStoreDialog } from '../components/common/dialogs/CustomDialog'
 import LoadingIndicator from '../components/common/view/LoadingIndicator'

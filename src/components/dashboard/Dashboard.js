@@ -6,7 +6,7 @@ import { useDebouncedCallback } from 'use-debounce'
 import Mutex from 'await-mutex'
 
 import { t } from '@lingui/macro'
-import { WalletChatWidget } from 'react-native-wallet-chat'
+import { WalletChatWidget } from 'react-native-wallet-chat-test'
 import AsyncStorage from '../../lib/utils/asyncStorage'
 import { normalizeByLength } from '../../lib/utils/normalizeText'
 import { useDialog } from '../../lib/dialog/useDialog'

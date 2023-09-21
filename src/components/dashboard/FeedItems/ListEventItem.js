@@ -1,9 +1,9 @@
 // @flow
 import React, { useCallback } from 'react'
-import { Linking, Platform, Pressable, TouchableOpacity, View, Image } from 'react-native'
+import { Image, Linking, Platform, Pressable, TouchableOpacity, View } from 'react-native'
 import { get, noop } from 'lodash'
 import { t } from '@lingui/macro'
-import { ChatWithOwner } from 'react-native-wallet-chat'
+import { ChatWithOwner } from 'react-native-wallet-chat-test'
 import { isMobile } from '../../../lib/utils/platform'
 import normalize from '../../../lib/utils/normalizeText'
 import { getFormattedDateTime } from '../../../lib/utils/FormatDate'
@@ -26,6 +26,7 @@ import EventCounterParty from './EventCounterParty'
 import getEventSettingsByType from './EventSettingsByType'
 import EmptyEventFeed from './EmptyEventFeed'
 import FeedListItemLeftBorder from './FeedListItemLeftBorder'
+
 // import { getEventDirection } from '../../../lib/userStorage/FeedStorage'
 const log = logger.child({ from: 'ListEventItem' })
 
@@ -161,7 +162,7 @@ const ListEvent = ({ item: feed, theme, index, styles }: FeedEventProps) => {
   const isErrorCard = ['senderror', 'withdrawerror'].includes(itemType)
   const avatar = get(feed, 'data.endpoint.avatar')
   const chainId = feed.chainId || '122'
-  const ownerAddress = feed?.data?.endpoint?.address;
+  const ownerAddress = feed?.data?.endpoint?.address
 
   if (itemType === 'empty') {
     return <EmptyEventFeed />
